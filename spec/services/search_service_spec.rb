@@ -2,7 +2,7 @@ require "rails_helper"
 
 RSpec.describe SearchService do
   it "returns a list of results" do
-    VCR.use_cassette("search_service", serialize_with: :json) do |cassette|
+    VCR.use_cassette("search_service", serialize_with: :json) do |_cassette|
       response = SearchService.search("sweet potatoes")
 
       expect(response).to be_a(Hash)
