@@ -1,0 +1,12 @@
+<h1>Search Results For: <%= @facade.search_params %></h1>
+<div id="results-count"><%= @facade.count %> results found.</div>
+<ul id="results">
+  <% @facade.foods.each do |food| %>
+    <li>
+      <h2><%= food.description %></h2>
+      <p>Brand Owner: <%= food.brand_owner %></p>
+      <p>Ingredients: <%= food.ingredients.nil? ? "None" : food.ingredients %></p>
+      <p>GTIN/UPC code: <%= food.gtin_upc %></p>
+    </li>
+  <% end %>
+</ul>
