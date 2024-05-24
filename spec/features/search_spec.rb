@@ -25,7 +25,7 @@ RSpec.describe "Search", type: :feature do
       foods = body[:foods]
 
       within "#results-count" do
-        expect(page).to have_content("#{foods.length} results found.")
+        expect(page).to have_content("#{body[:totalHits]} results found.")
       end
 
       within "#results" do
