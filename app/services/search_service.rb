@@ -11,6 +11,6 @@ class SearchService
 
     response = conn.get("/fdc/v1/foods/search")
 
-    JSON.parse(response.body, symbolize_names: true)[:foods]
+    JSON.parse(response.body, symbolize_names: true)
   end
 end

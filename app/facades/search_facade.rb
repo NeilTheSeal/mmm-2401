@@ -17,7 +17,7 @@ class SearchFacade
 
   def search
     search_results = SearchService.search(@search_params)
-    @count = search_results.count
-    search_results
+    @count = search_results[:totalHits]
+    search_results[:foods]
   end
 end
